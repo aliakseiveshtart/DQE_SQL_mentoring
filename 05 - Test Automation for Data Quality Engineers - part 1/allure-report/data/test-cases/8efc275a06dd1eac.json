@@ -1,0 +1,79 @@
+{
+  "uid" : "8efc275a06dd1eac",
+  "name" : "test_person_address_col_name",
+  "fullName" : "pytests#test_person_address_col_name",
+  "historyId" : "a76ec09e69fc285202a4030ca5eb3b55",
+  "time" : {
+    "start" : 1636710152216,
+    "stop" : 1636710152228,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e2544e72e0feecbb",
+      "name" : "SQL query",
+      "source" : "e2544e72e0feecbb.txt",
+      "type" : "text/plain",
+      "size" : 163
+    }, {
+      "uid" : "d806dbc095ee16c1",
+      "name" : "Result",
+      "source" : "d806dbc095ee16c1.txt",
+      "type" : "text/plain",
+      "size" : 1
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Person.Address - test column name"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "11828-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8efc275a06dd1eac.json",
+  "parameterValues" : [ ]
+}

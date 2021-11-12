@@ -1,0 +1,8 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Production.UnitMeasure - test duplicates","","0","0","3","0","0"
+"","Production.Document - test FileExtension and FolderFlag","","0","0","1","0","0"
+"","Person.Address - test column lenght","","0","0","1","0","0"
+"","Production.Document - test FileExtension and FileName","","0","0","1","0","0"
+"","Person.Address - test column type","","0","0","1","0","0"
+"","Person.Address - test column name","","0","0","1","0","0"
+"","Person.Address - test StateProvinceID key","","0","0","1","0","0"

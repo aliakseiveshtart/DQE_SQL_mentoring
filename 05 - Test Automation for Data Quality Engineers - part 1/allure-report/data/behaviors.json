@@ -1,0 +1,186 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Production.Document - test FileExtension and FileName",
+    "children" : [ {
+      "name" : "test_prod_doc_ext",
+      "uid" : "202e2ac4f9212afd",
+      "parentUid" : "e503e8ae184af7a693dc350745b49b44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152135,
+        "stop" : 1636710152153,
+        "duration" : 18
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e503e8ae184af7a693dc350745b49b44"
+  }, {
+    "name" : "Production.Document - test FileExtension and FolderFlag",
+    "children" : [ {
+      "name" : "test_prod_doc_folder",
+      "uid" : "c72c4b1c25e19b9b",
+      "parentUid" : "f78d98945303f3cf034407253b82a3ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152157,
+        "stop" : 1636710152164,
+        "duration" : 7
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "f78d98945303f3cf034407253b82a3ce"
+  }, {
+    "name" : "Production.UnitMeasure - test duplicates",
+    "children" : [ {
+      "name" : "test_prod_um_duplicates",
+      "uid" : "c101ee963c08bc49",
+      "parentUid" : "f700e5d61efe3c0c452f777e4f953ddc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152168,
+        "stop" : 1636710152176,
+        "duration" : 8
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_prod_um_code_null",
+      "uid" : "ea2f27b9389a9b34",
+      "parentUid" : "f700e5d61efe3c0c452f777e4f953ddc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152183,
+        "stop" : 1636710152189,
+        "duration" : 6
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_prod_um_name_null",
+      "uid" : "711e198a76521c07",
+      "parentUid" : "f700e5d61efe3c0c452f777e4f953ddc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152193,
+        "stop" : 1636710152198,
+        "duration" : 5
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "f700e5d61efe3c0c452f777e4f953ddc"
+  }, {
+    "name" : "Person.Address - test StateProvinceID key",
+    "children" : [ {
+      "name" : "test_person_address_spid",
+      "uid" : "44a7c325def6aa25",
+      "parentUid" : "eb93667e545a3e53ce9d5fde87be48e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152202,
+        "stop" : 1636710152212,
+        "duration" : 10
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "eb93667e545a3e53ce9d5fde87be48e5"
+  }, {
+    "name" : "Person.Address - test column name",
+    "children" : [ {
+      "name" : "test_person_address_col_name",
+      "uid" : "8efc275a06dd1eac",
+      "parentUid" : "6c39c88bdec40add790f89a07150f5de",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152216,
+        "stop" : 1636710152228,
+        "duration" : 12
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6c39c88bdec40add790f89a07150f5de"
+  }, {
+    "name" : "Person.Address - test column type",
+    "children" : [ {
+      "name" : "test_person_address_col_type",
+      "uid" : "7fcef68bbe9131dd",
+      "parentUid" : "5c7660cb10eff4704bf30ccef47921ec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152232,
+        "stop" : 1636710152244,
+        "duration" : 12
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5c7660cb10eff4704bf30ccef47921ec"
+  }, {
+    "name" : "Person.Address - test column lenght",
+    "children" : [ {
+      "name" : "test_person_address_col_lenght",
+      "uid" : "ebbf07883ee9d40",
+      "parentUid" : "c6b507155890e37463a3afc23810d2b2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152250,
+        "stop" : 1636710152264,
+        "duration" : 14
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c6b507155890e37463a3afc23810d2b2"
+  } ]
+}
