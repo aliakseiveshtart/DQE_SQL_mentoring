@@ -1,0 +1,71 @@
+{
+  "uid" : "f01dbd463a1e4c40",
+  "name" : "test_prod_um_code_null",
+  "fullName" : "pytests#test_prod_um_code_null",
+  "historyId" : "950d068f2f10c736fd7b327f44f63e8a",
+  "time" : {
+    "start" : 1636724349505,
+    "stop" : 1636724349511,
+    "duration" : 6
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9f615d72c94590d2",
+      "name" : "Insert",
+      "source" : "9f615d72c94590d2.txt",
+      "type" : "text/plain",
+      "size" : 68
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.UnitMeasure - test duplicates"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "28160-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f01dbd463a1e4c40.json",
+  "parameterValues" : [ ]
+}

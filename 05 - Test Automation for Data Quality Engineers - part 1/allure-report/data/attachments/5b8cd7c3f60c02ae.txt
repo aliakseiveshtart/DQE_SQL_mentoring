@@ -1,0 +1,2 @@
+COLUMN_NAME    0
+DATA_TYPE      0

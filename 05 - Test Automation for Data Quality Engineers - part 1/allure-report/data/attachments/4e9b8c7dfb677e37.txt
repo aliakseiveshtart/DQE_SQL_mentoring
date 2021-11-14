@@ -1,0 +1,2 @@
+COLUMN_NAME                 0
+CHARACTER_MAXIMUM_LENGTH    0

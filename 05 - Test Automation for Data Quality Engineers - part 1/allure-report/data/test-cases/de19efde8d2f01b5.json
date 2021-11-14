@@ -1,0 +1,201 @@
+{
+  "uid" : "de19efde8d2f01b5",
+  "name" : "test_prod_doc_ext",
+  "fullName" : "pytests#test_prod_doc_ext",
+  "historyId" : "884edbb1757cd82267afad75c8289b15",
+  "time" : {
+    "start" : 1636903247835,
+    "stop" : 1636903247847,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 12,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ {
+    "name" : "rp_logger",
+    "time" : {
+      "start" : 1636903247832,
+      "stop" : 1636903247832,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8721e1585758b6df",
+      "name" : "SQL query",
+      "source" : "8721e1585758b6df.txt",
+      "type" : "text/plain",
+      "size" : 665
+    }, {
+      "uid" : "dcd8073382dea8a1",
+      "name" : "Result",
+      "source" : "dcd8073382dea8a1.txt",
+      "type" : "text/plain",
+      "size" : 1
+    }, {
+      "uid" : "e2a1d89f9e03a523",
+      "name" : "log",
+      "source" : "e2a1d89f9e03a523.txt",
+      "type" : "text/plain",
+      "size" : 130
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.Document - test FileExtension and FileName"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "19608-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "36c400b9b203c76c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636899778537,
+        "stop" : 1636899778544,
+        "duration" : 7
+      }
+    }, {
+      "uid" : "dcfc4961a78b56d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636894732437,
+        "stop" : 1636894732445,
+        "duration" : 8
+      }
+    }, {
+      "uid" : "8b6626e7f28fcfca",
+      "status" : "broken",
+      "statusDetails" : "TypeError: prod() missing 1 required positional argument: 'rp_logger'",
+      "time" : {
+        "start" : 1636894704911,
+        "stop" : 1636894704911,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "f8737a0014953c15",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636894628882,
+        "stop" : 1636894628893,
+        "duration" : 11
+      }
+    }, {
+      "uid" : "8f4747d98bc9d375",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'function' object has no attribute 'info'",
+      "time" : {
+        "start" : 1636725440310,
+        "stop" : 1636725440318,
+        "duration" : 8
+      }
+    }, {
+      "uid" : "c84f3d3eaeb0fe40",
+      "status" : "broken",
+      "statusDetails" : "TypeError: prod() missing 1 required positional argument: 'rp_logger'",
+      "time" : {
+        "start" : 1636725420004,
+        "stop" : 1636725420004,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "af03482ce8692f1e",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'function' object has no attribute 'info'",
+      "time" : {
+        "start" : 1636725351531,
+        "stop" : 1636725351536,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "82c873c8787390d4",
+      "status" : "broken",
+      "statusDetails" : "_pytest.fixtures.FixtureLookupError: ('rp_logger', <FixtureRequest for <Function test_prod_doc_ext>>)",
+      "time" : {
+        "start" : 1636725250496,
+        "stop" : 1636725250496,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "cf7816b8aa07d4b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636724358040,
+        "stop" : 1636724358059,
+        "duration" : 19
+      }
+    }, {
+      "uid" : "743d99a3c2201480",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636724349460,
+        "stop" : 1636724349469,
+        "duration" : 9
+      }
+    }, {
+      "uid" : "329a399bfa525632",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636723111177,
+        "stop" : 1636723111195,
+        "duration" : 18
+      }
+    }, {
+      "uid" : "c899a925b942d2fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152135,
+        "stop" : 1636710152153,
+        "duration" : 18
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "de19efde8d2f01b5.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,2 @@
+[32mINFO    [0m conftest:pytests.py:26 Test attachments
+[32mINFO    [0m conftest:pytests.py:35 Test FileExtension and FileName

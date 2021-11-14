@@ -1,0 +1,77 @@
+{
+  "uid" : "a57721e02f3b3f8c",
+  "name" : "test_prod_um_duplicates",
+  "fullName" : "pytests#test_prod_um_duplicates",
+  "historyId" : "e178af03b321af1cc327ad2d0065f6c3",
+  "time" : {
+    "start" : 1636725250968,
+    "stop" : 1636725250973,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "221c3f38febca12e",
+      "name" : "SQL query",
+      "source" : "221c3f38febca12e.txt",
+      "type" : "text/plain",
+      "size" : 175
+    }, {
+      "uid" : "4e7baf848ed34c92",
+      "name" : "Result",
+      "source" : "4e7baf848ed34c92.txt",
+      "type" : "text/plain",
+      "size" : 1
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.UnitMeasure - test duplicates"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "16364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a57721e02f3b3f8c.json",
+  "parameterValues" : [ ]
+}

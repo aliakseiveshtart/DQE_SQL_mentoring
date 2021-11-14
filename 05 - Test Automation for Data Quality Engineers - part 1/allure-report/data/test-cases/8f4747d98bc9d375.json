@@ -1,0 +1,75 @@
+{
+  "uid" : "8f4747d98bc9d375",
+  "name" : "test_prod_doc_ext",
+  "fullName" : "pytests#test_prod_doc_ext",
+  "historyId" : "884edbb1757cd82267afad75c8289b15",
+  "time" : {
+    "start" : 1636725440310,
+    "stop" : 1636725440318,
+    "duration" : 8
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'function' object has no attribute 'info'",
+  "statusTrace" : "@allure.feature('Production.Document - test FileExtension and FileName')\n    def test_prod_doc_ext():\n>       result = prod('Ext_res', rp_logger)\n\npytests.py:52: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ncolumn = 'Ext_res', rp_logger = <function rp_logger at 0x000002AB923A6E50>\n\n    def prod(column, rp_logger):\n        sql_str = db_con.read_file(r'sql\\Production\\Document\\FileExtension_FolderFlag.sql')\n        allure.attach(sql_str, 'SQL query', allure.attachment_type.TEXT)\n        df = db_con.query(sql_str)\n        result = df[column].values[0]\n>       rp_logger.info(\"Test attachments\", attachment={\"data\": sql_str})\nE       AttributeError: 'function' object has no attribute 'info'\n\npytests.py:44: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'function' object has no attribute 'info'",
+    "statusTrace" : "@allure.feature('Production.Document - test FileExtension and FileName')\n    def test_prod_doc_ext():\n>       result = prod('Ext_res', rp_logger)\n\npytests.py:52: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ncolumn = 'Ext_res', rp_logger = <function rp_logger at 0x000002AB923A6E50>\n\n    def prod(column, rp_logger):\n        sql_str = db_con.read_file(r'sql\\Production\\Document\\FileExtension_FolderFlag.sql')\n        allure.attach(sql_str, 'SQL query', allure.attachment_type.TEXT)\n        df = db_con.query(sql_str)\n        result = df[column].values[0]\n>       rp_logger.info(\"Test attachments\", attachment={\"data\": sql_str})\nE       AttributeError: 'function' object has no attribute 'info'\n\npytests.py:44: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "485deb80dc545952",
+      "name" : "SQL query",
+      "source" : "485deb80dc545952.txt",
+      "type" : "text/plain",
+      "size" : 665
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.Document - test FileExtension and FileName"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "8156-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8f4747d98bc9d375.json",
+  "parameterValues" : [ ]
+}

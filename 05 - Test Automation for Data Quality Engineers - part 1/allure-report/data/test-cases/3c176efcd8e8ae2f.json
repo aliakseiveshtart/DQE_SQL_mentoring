@@ -1,0 +1,98 @@
+{
+  "uid" : "3c176efcd8e8ae2f",
+  "name" : "test_prod_doc_folder",
+  "fullName" : "pytests#test_prod_doc_folder",
+  "historyId" : "1d4de6dd61b5451cb879dc4fee86254d",
+  "time" : {
+    "start" : 1636899778688,
+    "stop" : 1636899778695,
+    "duration" : 7
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "rp_logger",
+    "time" : {
+      "start" : 1636899778536,
+      "stop" : 1636899778536,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b5b82c7dfb4a4460",
+      "name" : "SQL query",
+      "source" : "b5b82c7dfb4a4460.txt",
+      "type" : "text/plain",
+      "size" : 665
+    }, {
+      "uid" : "31938aa7cb5b67f9",
+      "name" : "Result",
+      "source" : "31938aa7cb5b67f9.txt",
+      "type" : "text/plain",
+      "size" : 1
+    }, {
+      "uid" : "921a10a0627fc806",
+      "name" : "log",
+      "source" : "921a10a0627fc806.txt",
+      "type" : "text/plain",
+      "size" : 132
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.Document - test FileExtension and FolderFlag"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "14656-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3c176efcd8e8ae2f.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,1 @@
+[32mINFO    [0m conftest:pytests.py:96 Test attachments

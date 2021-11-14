@@ -1,0 +1,77 @@
+{
+  "uid" : "bfcbc61f2f158400",
+  "name" : "test_prod_doc_folder",
+  "fullName" : "pytests#test_prod_doc_folder",
+  "historyId" : "1d4de6dd61b5451cb879dc4fee86254d",
+  "time" : {
+    "start" : 1636724358206,
+    "stop" : 1636724358213,
+    "duration" : 7
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9a4e18f41f9e699b",
+      "name" : "SQL query",
+      "source" : "9a4e18f41f9e699b.txt",
+      "type" : "text/plain",
+      "size" : 665
+    }, {
+      "uid" : "78cf54eb449dcba6",
+      "name" : "Result",
+      "source" : "78cf54eb449dcba6.txt",
+      "type" : "text/plain",
+      "size" : 1
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.Document - test FileExtension and FolderFlag"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "26960-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bfcbc61f2f158400.json",
+  "parameterValues" : [ ]
+}

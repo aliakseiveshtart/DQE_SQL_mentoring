@@ -1,0 +1,72 @@
+{
+  "uid" : "8b6626e7f28fcfca",
+  "name" : "test_prod_doc_ext",
+  "fullName" : "pytests#test_prod_doc_ext",
+  "historyId" : "884edbb1757cd82267afad75c8289b15",
+  "time" : {
+    "start" : 1636894704911,
+    "stop" : 1636894704911,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: prod() missing 1 required positional argument: 'rp_logger'",
+  "statusTrace" : "rp_logger = <RPLogger conftest (DEBUG)>\n\n    @allure.feature('Production.Document - test FileExtension and FileName')\n    def test_prod_doc_ext(rp_logger):\n>       result = prod('Ext_res')\nE       TypeError: prod() missing 1 required positional argument: 'rp_logger'\n\npytests.py:34: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "rp_logger",
+    "time" : {
+      "start" : 1636894704910,
+      "stop" : 1636894704910,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.Document - test FileExtension and FileName"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "21304-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8b6626e7f28fcfca.json",
+  "parameterValues" : [ ]
+}

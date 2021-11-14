@@ -1,0 +1,200 @@
+{
+  "uid" : "daf50748e3724ce5",
+  "name" : "test_prod_doc_folder",
+  "fullName" : "pytests#test_prod_doc_folder",
+  "historyId" : "1d4de6dd61b5451cb879dc4fee86254d",
+  "time" : {
+    "start" : 1636903247991,
+    "stop" : 1636903248000,
+    "duration" : 9
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 12,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ {
+    "name" : "rp_logger",
+    "time" : {
+      "start" : 1636903247832,
+      "stop" : 1636903247832,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "42228ba8b675cfc8",
+      "name" : "SQL query",
+      "source" : "42228ba8b675cfc8.txt",
+      "type" : "text/plain",
+      "size" : 665
+    }, {
+      "uid" : "359fb3e79c0a2162",
+      "name" : "Result",
+      "source" : "359fb3e79c0a2162.txt",
+      "type" : "text/plain",
+      "size" : 1
+    }, {
+      "uid" : "3adddab90f10b213",
+      "name" : "log",
+      "source" : "3adddab90f10b213.txt",
+      "type" : "text/plain",
+      "size" : 132
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Production.Document - test FileExtension and FolderFlag"
+  }, {
+    "name" : "suite",
+    "value" : "pytests"
+  }, {
+    "name" : "host",
+    "value" : "EPBYMINW12E5"
+  }, {
+    "name" : "thread",
+    "value" : "19608-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3c176efcd8e8ae2f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636899778688,
+        "stop" : 1636899778695,
+        "duration" : 7
+      }
+    }, {
+      "uid" : "78d1efdc2fe8c3e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636894732599,
+        "stop" : 1636894732608,
+        "duration" : 9
+      }
+    }, {
+      "uid" : "8ff7dee92c273fb8",
+      "status" : "broken",
+      "statusDetails" : "TypeError: prod() missing 1 required positional argument: 'rp_logger'",
+      "time" : {
+        "start" : 1636894705298,
+        "stop" : 1636894705298,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "7894ebfa00a699f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636894629049,
+        "stop" : 1636894629061,
+        "duration" : 12
+      }
+    }, {
+      "uid" : "2321f9a45fb80c8c",
+      "status" : "broken",
+      "statusDetails" : "TypeError: prod() missing 1 required positional argument: 'rp_logger'",
+      "time" : {
+        "start" : 1636725440742,
+        "stop" : 1636725440742,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "91030fa6d48977b3",
+      "status" : "broken",
+      "statusDetails" : "TypeError: prod() missing 1 required positional argument: 'rp_logger'",
+      "time" : {
+        "start" : 1636725420411,
+        "stop" : 1636725420411,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "e03b88618268e13e",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'function' object has no attribute 'info'",
+      "time" : {
+        "start" : 1636725351890,
+        "stop" : 1636725351895,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "7fb0ee263af0f5d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636725250819,
+        "stop" : 1636725250825,
+        "duration" : 6
+      }
+    }, {
+      "uid" : "bfcbc61f2f158400",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636724358206,
+        "stop" : 1636724358213,
+        "duration" : 7
+      }
+    }, {
+      "uid" : "58b4edb38856e00a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636724349475,
+        "stop" : 1636724349482,
+        "duration" : 7
+      }
+    }, {
+      "uid" : "13150e19bc7d1293",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636723111338,
+        "stop" : 1636723111351,
+        "duration" : 13
+      }
+    }, {
+      "uid" : "7a47cb7151643ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636710152157,
+        "stop" : 1636710152164,
+        "duration" : 7
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "daf50748e3724ce5.json",
+  "parameterValues" : [ ]
+}
