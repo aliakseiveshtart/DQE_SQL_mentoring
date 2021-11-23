@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.9.2 on linux)" generated="20211123 12:20:34.441" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.2 (Python 3.9.2 on linux)" generated="20211123 12:21:09.452" rpa="false" schemaversion="2">
 <suite id="s1" name="Robottests" source="/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/robottests.robot">
 <kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
 <arg>pymssql</arg>
@@ -10,30 +10,30 @@
 <arg>${DBPort}</arg>
 <doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
 connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
-<msg timestamp="20211123 12:20:35.059" level="INFO">Connecting using : pymssql.connect(database=AdventureWorks2019, user=SA, password=1epeSHka, host=127.0.0.1, port=1433) </msg>
-<status status="PASS" starttime="20211123 12:20:34.996" endtime="20211123 12:20:35.073"/>
+<msg timestamp="20211123 12:21:09.988" level="INFO">Connecting using : pymssql.connect(database=AdventureWorks2019, user=SA, password=1epeSHka, host=127.0.0.1, port=1433) </msg>
+<status status="PASS" starttime="20211123 12:21:09.942" endtime="20211123 12:21:09.995"/>
 </kw>
 <test id="s1-t1" name="Table Must Exist - Address">
 <kw name="Table Must Exist" library="DatabaseLibrary">
 <arg>Address</arg>
 <doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
 explicit transaction commit or rollback.</doc>
-<msg timestamp="20211123 12:20:35.205" level="INFO">Executing : Table Must Exist  |  Address </msg>
-<msg timestamp="20211123 12:20:35.205" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='Address' </msg>
-<status status="PASS" starttime="20211123 12:20:35.162" endtime="20211123 12:20:35.206"/>
+<msg timestamp="20211123 12:21:10.119" level="INFO">Executing : Table Must Exist  |  Address </msg>
+<msg timestamp="20211123 12:21:10.119" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='Address' </msg>
+<status status="PASS" starttime="20211123 12:21:10.077" endtime="20211123 12:21:10.120"/>
 </kw>
 <doc>Checking for the presence of the Address table in the database</doc>
 <tag>Address</tag>
 <tag>smoke</tag>
-<status status="PASS" starttime="20211123 12:20:35.117" endtime="20211123 12:20:35.249"/>
+<status status="PASS" starttime="20211123 12:21:10.035" endtime="20211123 12:21:10.163"/>
 </test>
 <test id="s1-t2" name="Verify Query - Check StateProvinceID">
 <kw name="Get File" library="OperatingSystem">
 <var>${sql_query}</var>
 <arg>sql/Person/Address/StateProvinceID.sql</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20211123 12:20:35.377" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/StateProvinceID.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/StateProvinceID.sql&lt;/a&gt;'.</msg>
-<msg timestamp="20211123 12:20:35.378" level="INFO">${sql_query} = SELECT count(*) AS count
+<msg timestamp="20211123 12:21:10.289" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/StateProvinceID.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/StateProvinceID.sql&lt;/a&gt;'.</msg>
+<msg timestamp="20211123 12:21:10.289" level="INFO">${sql_query} = SELECT count(*) AS count
 FROM (
 	SELECT DISTINCT StateProvinceID
 	FROM Person.Address
@@ -42,7 +42,7 @@ FROM (
 	FROM Person.StateProvince
 	) t;
 </msg>
-<status status="PASS" starttime="20211123 12:20:35.334" endtime="20211123 12:20:35.378"/>
+<status status="PASS" starttime="20211123 12:21:10.249" endtime="20211123 12:21:10.289"/>
 </kw>
 <kw name="Query" library="DatabaseLibrary">
 <var>${output}</var>
@@ -50,7 +50,7 @@ FROM (
 <doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
 input `sansTran` to True to run command without an explicit transaction commit or rollback.
 Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20211123 12:20:35.463" level="INFO">Executing : Query  |  SELECT count(*) AS count
+<msg timestamp="20211123 12:21:10.371" level="INFO">Executing : Query  |  SELECT count(*) AS count
 FROM (
 	SELECT DISTINCT StateProvinceID
 	FROM Person.Address
@@ -59,23 +59,23 @@ FROM (
 	FROM Person.StateProvince
 	) t;
  </msg>
-<msg timestamp="20211123 12:20:35.466" level="INFO">${output} = [(0,)]</msg>
-<status status="PASS" starttime="20211123 12:20:35.420" endtime="20211123 12:20:35.466"/>
+<msg timestamp="20211123 12:21:10.374" level="INFO">${output} = [(0,)]</msg>
+<status status="PASS" starttime="20211123 12:21:10.330" endtime="20211123 12:21:10.374"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211123 12:20:35.555" level="INFO">[(0,)]</msg>
-<status status="PASS" starttime="20211123 12:20:35.509" endtime="20211123 12:20:35.555"/>
+<msg timestamp="20211123 12:21:10.456" level="INFO">[(0,)]</msg>
+<status status="PASS" starttime="20211123 12:21:10.414" endtime="20211123 12:21:10.456"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output}</arg>
 <arg>[(0,)]</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20211123 12:20:35.639" level="INFO">Argument types are:
+<msg timestamp="20211123 12:21:10.537" level="INFO">Argument types are:
 &lt;class 'list'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20211123 12:20:35.597" endtime="20211123 12:20:35.639"/>
+<status status="PASS" starttime="20211123 12:21:10.497" endtime="20211123 12:21:10.538"/>
 </kw>
 <doc>| The test checks if all StateProvinceID key values from the Address table are in the StateProvince table
 |
@@ -84,15 +84,15 @@ FROM (
 | 3. If as a result of the script execution we get 0, then the test is passed</doc>
 <tag>Address</tag>
 <tag>smoke</tag>
-<status status="PASS" starttime="20211123 12:20:35.292" endtime="20211123 12:20:35.682"/>
+<status status="PASS" starttime="20211123 12:21:10.205" endtime="20211123 12:21:10.578"/>
 </test>
 <test id="s1-t3" name="Verify Query - column name">
 <kw name="Get File" library="OperatingSystem">
 <var>${sql_query}</var>
 <arg>sql/Person/Address/Measures.sql</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20211123 12:20:35.812" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/Measures.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/Measures.sql&lt;/a&gt;'.</msg>
-<msg timestamp="20211123 12:20:35.812" level="INFO">${sql_query} = SELECT COLUMN_NAME
+<msg timestamp="20211123 12:21:10.699" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/Measures.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Person/Address/Measures.sql&lt;/a&gt;'.</msg>
+<msg timestamp="20211123 12:21:10.699" level="INFO">${sql_query} = SELECT COLUMN_NAME
 	,IS_NULLABLE
 	,DATA_TYPE
 	,CHARACTER_MAXIMUM_LENGTH
@@ -101,7 +101,7 @@ WHERE TABLE_SCHEMA = 'Person'
 	AND TABLE_NAME = 'Address'
 ORDER BY COLUMN_NAME;
 </msg>
-<status status="PASS" starttime="20211123 12:20:35.770" endtime="20211123 12:20:35.813"/>
+<status status="PASS" starttime="20211123 12:21:10.659" endtime="20211123 12:21:10.699"/>
 </kw>
 <kw name="Query" library="DatabaseLibrary">
 <var>${output}</var>
@@ -111,7 +111,7 @@ ORDER BY COLUMN_NAME;
 <doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
 input `sansTran` to True to run command without an explicit transaction commit or rollback.
 Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20211123 12:20:35.898" level="INFO">Executing : Query  |  SELECT COLUMN_NAME
+<msg timestamp="20211123 12:21:10.781" level="INFO">Executing : Query  |  SELECT COLUMN_NAME
 	,IS_NULLABLE
 	,DATA_TYPE
 	,CHARACTER_MAXIMUM_LENGTH
@@ -120,68 +120,68 @@ WHERE TABLE_SCHEMA = 'Person'
 	AND TABLE_NAME = 'Address'
 ORDER BY COLUMN_NAME;
  </msg>
-<msg timestamp="20211123 12:20:35.901" level="INFO">${output} = [{'COLUMN_NAME': 'AddressID', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'int', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'AddressLine1', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIM...</msg>
-<status status="PASS" starttime="20211123 12:20:35.855" endtime="20211123 12:20:35.901"/>
+<msg timestamp="20211123 12:21:10.784" level="INFO">${output} = [{'COLUMN_NAME': 'AddressID', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'int', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'AddressLine1', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIM...</msg>
+<status status="PASS" starttime="20211123 12:21:10.738" endtime="20211123 12:21:10.784"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211123 12:20:35.986" level="INFO">[{'COLUMN_NAME': 'AddressID', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'int', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'AddressLine1', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 60}, {'COLUMN_NAME': 'AddressLine2', 'IS_NULLABLE': 'YES', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 60}, {'COLUMN_NAME': 'City', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 30}, {'COLUMN_NAME': 'ModifiedDate', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'datetime', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'PostalCode', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 15}, {'COLUMN_NAME': 'rowguid', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'uniqueidentifier', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'SpatialLocation', 'IS_NULLABLE': 'YES', 'DATA_TYPE': 'geography', 'CHARACTER_MAXIMUM_LENGTH': -1}, {'COLUMN_NAME': 'StateProvinceID', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'int', 'CHARACTER_MAXIMUM_LENGTH': None}]</msg>
-<status status="PASS" starttime="20211123 12:20:35.943" endtime="20211123 12:20:35.986"/>
+<msg timestamp="20211123 12:21:10.863" level="INFO">[{'COLUMN_NAME': 'AddressID', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'int', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'AddressLine1', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 60}, {'COLUMN_NAME': 'AddressLine2', 'IS_NULLABLE': 'YES', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 60}, {'COLUMN_NAME': 'City', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 30}, {'COLUMN_NAME': 'ModifiedDate', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'datetime', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'PostalCode', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'nvarchar', 'CHARACTER_MAXIMUM_LENGTH': 15}, {'COLUMN_NAME': 'rowguid', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'uniqueidentifier', 'CHARACTER_MAXIMUM_LENGTH': None}, {'COLUMN_NAME': 'SpatialLocation', 'IS_NULLABLE': 'YES', 'DATA_TYPE': 'geography', 'CHARACTER_MAXIMUM_LENGTH': -1}, {'COLUMN_NAME': 'StateProvinceID', 'IS_NULLABLE': 'NO', 'DATA_TYPE': 'int', 'CHARACTER_MAXIMUM_LENGTH': None}]</msg>
+<status status="PASS" starttime="20211123 12:21:10.824" endtime="20211123 12:21:10.863"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[0]}[COLUMN_NAME]</arg>
 <arg>AddressID</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.028" endtime="20211123 12:20:36.072"/>
+<status status="PASS" starttime="20211123 12:21:10.905" endtime="20211123 12:21:10.949"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[1]}[COLUMN_NAME]</arg>
 <arg>AddressLine1</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.113" endtime="20211123 12:20:36.157"/>
+<status status="PASS" starttime="20211123 12:21:10.990" endtime="20211123 12:21:11.030"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[2]}[COLUMN_NAME]</arg>
 <arg>AddressLine2</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.201" endtime="20211123 12:20:36.243"/>
+<status status="PASS" starttime="20211123 12:21:11.070" endtime="20211123 12:21:11.110"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[3]}[COLUMN_NAME]</arg>
 <arg>City</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.286" endtime="20211123 12:20:36.329"/>
+<status status="PASS" starttime="20211123 12:21:11.150" endtime="20211123 12:21:11.191"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[4]}[COLUMN_NAME]</arg>
 <arg>ModifiedDate</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.371" endtime="20211123 12:20:36.414"/>
+<status status="PASS" starttime="20211123 12:21:11.231" endtime="20211123 12:21:11.271"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[5]}[COLUMN_NAME]</arg>
 <arg>PostalCode</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.455" endtime="20211123 12:20:36.498"/>
+<status status="PASS" starttime="20211123 12:21:11.312" endtime="20211123 12:21:11.354"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[6]}[COLUMN_NAME]</arg>
 <arg>rowguid</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.540" endtime="20211123 12:20:36.583"/>
+<status status="PASS" starttime="20211123 12:21:11.394" endtime="20211123 12:21:11.435"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[7]}[COLUMN_NAME]</arg>
 <arg>SpatialLocation</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.625" endtime="20211123 12:20:36.668"/>
+<status status="PASS" starttime="20211123 12:21:11.475" endtime="20211123 12:21:11.516"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[8]}[COLUMN_NAME]</arg>
 <arg>StateProvinceID</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20211123 12:20:36.710" endtime="20211123 12:20:36.753"/>
+<status status="PASS" starttime="20211123 12:21:11.557" endtime="20211123 12:21:11.597"/>
 </kw>
 <doc>| Checking for columns in the Address table
 |
@@ -190,29 +190,29 @@ ORDER BY COLUMN_NAME;
 | 3. We write the result to the list $ {output} and check it</doc>
 <tag>Address</tag>
 <tag>smoke</tag>
-<status status="PASS" starttime="20211123 12:20:35.725" endtime="20211123 12:20:36.798"/>
+<status status="PASS" starttime="20211123 12:21:10.617" endtime="20211123 12:21:11.638"/>
 </test>
 <test id="s1-t4" name="Table Must Exist - Document">
 <kw name="Table Must Exist" library="DatabaseLibrary">
 <arg>Document</arg>
 <doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
 explicit transaction commit or rollback.</doc>
-<msg timestamp="20211123 12:20:36.926" level="INFO">Executing : Table Must Exist  |  Document </msg>
-<msg timestamp="20211123 12:20:36.926" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='Document' </msg>
-<status status="PASS" starttime="20211123 12:20:36.883" endtime="20211123 12:20:36.927"/>
+<msg timestamp="20211123 12:21:11.760" level="INFO">Executing : Table Must Exist  |  Document </msg>
+<msg timestamp="20211123 12:21:11.760" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='Document' </msg>
+<status status="PASS" starttime="20211123 12:21:11.720" endtime="20211123 12:21:11.762"/>
 </kw>
 <doc>Checking for the presence of the Document table in the database</doc>
 <tag>Document</tag>
 <tag>smoke</tag>
-<status status="PASS" starttime="20211123 12:20:36.841" endtime="20211123 12:20:36.971"/>
+<status status="PASS" starttime="20211123 12:21:11.679" endtime="20211123 12:21:11.801"/>
 </test>
 <test id="s1-t5" name="Verify Query - Folder flag">
 <kw name="Get File" library="OperatingSystem">
 <var>${sql_query}</var>
 <arg>sql/Production/Document/FileExtension_FolderFlag.sql</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20211123 12:20:37.099" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql&lt;/a&gt;'.</msg>
-<msg timestamp="20211123 12:20:37.099" level="INFO">${sql_query} = SELECT sum(Extention_result) AS Ext_res
+<msg timestamp="20211123 12:21:11.923" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql&lt;/a&gt;'.</msg>
+<msg timestamp="20211123 12:21:11.923" level="INFO">${sql_query} = SELECT sum(Extention_result) AS Ext_res
 	,sum(FolderFlag_result) AS Fold_res
 FROM (
 	SELECT FolderFlag
@@ -222,7 +222,7 @@ FROM (
 		,CASE
 			WHEN FileExtension LIKE Extension
 				THEN 0...</msg>
-<status status="PASS" starttime="20211123 12:20:37.056" endtime="20211123 12:20:37.099"/>
+<status status="PASS" starttime="20211123 12:21:11.881" endtime="20211123 12:21:11.923"/>
 </kw>
 <kw name="Query" library="DatabaseLibrary">
 <var>${output}</var>
@@ -232,7 +232,7 @@ FROM (
 <doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
 input `sansTran` to True to run command without an explicit transaction commit or rollback.
 Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20211123 12:20:37.187" level="INFO">Executing : Query  |  SELECT sum(Extention_result) AS Ext_res
+<msg timestamp="20211123 12:21:12.003" level="INFO">Executing : Query  |  SELECT sum(Extention_result) AS Ext_res
 	,sum(FolderFlag_result) AS Fold_res
 FROM (
 	SELECT FolderFlag
@@ -267,23 +267,23 @@ FROM (
 		) t
 	) t1;
  </msg>
-<msg timestamp="20211123 12:20:37.189" level="INFO">${output} = [{'Ext_res': 0, 'Fold_res': 0}]</msg>
-<status status="PASS" starttime="20211123 12:20:37.144" endtime="20211123 12:20:37.233"/>
+<msg timestamp="20211123 12:21:12.005" level="INFO">${output} = [{'Ext_res': 0, 'Fold_res': 0}]</msg>
+<status status="PASS" starttime="20211123 12:21:11.963" endtime="20211123 12:21:12.048"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211123 12:20:37.316" level="INFO">[{'Ext_res': 0, 'Fold_res': 0}]</msg>
-<status status="PASS" starttime="20211123 12:20:37.274" endtime="20211123 12:20:37.316"/>
+<msg timestamp="20211123 12:21:12.129" level="INFO">[{'Ext_res': 0, 'Fold_res': 0}]</msg>
+<status status="PASS" starttime="20211123 12:21:12.088" endtime="20211123 12:21:12.129"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[0]}[Fold_res]</arg>
 <arg>0</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20211123 12:20:37.399" level="INFO">Argument types are:
+<msg timestamp="20211123 12:21:12.212" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20211123 12:20:37.357" endtime="20211123 12:20:37.400"/>
+<status status="PASS" starttime="20211123 12:21:12.170" endtime="20211123 12:21:12.212"/>
 </kw>
 <doc>| Testing if the FolderFlag column is well formed.
 |
@@ -292,15 +292,15 @@ FROM (
 | 3. If as a result of the script execution we get 0, then the test is passed</doc>
 <tag>Document</tag>
 <tag>smoke</tag>
-<status status="PASS" starttime="20211123 12:20:37.013" endtime="20211123 12:20:37.441"/>
+<status status="PASS" starttime="20211123 12:21:11.840" endtime="20211123 12:21:12.254"/>
 </test>
 <test id="s1-t6" name="Verify Query - File extention">
 <kw name="Get File" library="OperatingSystem">
 <var>${sql_query}</var>
 <arg>sql/Production/Document/FileExtension_FolderFlag.sql</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20211123 12:20:37.568" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql&lt;/a&gt;'.</msg>
-<msg timestamp="20211123 12:20:37.568" level="INFO">${sql_query} = SELECT sum(Extention_result) AS Ext_res
+<msg timestamp="20211123 12:21:12.376" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/Document/FileExtension_FolderFlag.sql&lt;/a&gt;'.</msg>
+<msg timestamp="20211123 12:21:12.376" level="INFO">${sql_query} = SELECT sum(Extention_result) AS Ext_res
 	,sum(FolderFlag_result) AS Fold_res
 FROM (
 	SELECT FolderFlag
@@ -310,7 +310,7 @@ FROM (
 		,CASE
 			WHEN FileExtension LIKE Extension
 				THEN 0...</msg>
-<status status="PASS" starttime="20211123 12:20:37.526" endtime="20211123 12:20:37.568"/>
+<status status="PASS" starttime="20211123 12:21:12.336" endtime="20211123 12:21:12.377"/>
 </kw>
 <kw name="Query" library="DatabaseLibrary">
 <var>${output}</var>
@@ -320,7 +320,7 @@ FROM (
 <doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
 input `sansTran` to True to run command without an explicit transaction commit or rollback.
 Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20211123 12:20:37.652" level="INFO">Executing : Query  |  SELECT sum(Extention_result) AS Ext_res
+<msg timestamp="20211123 12:21:12.464" level="INFO">Executing : Query  |  SELECT sum(Extention_result) AS Ext_res
 	,sum(FolderFlag_result) AS Fold_res
 FROM (
 	SELECT FolderFlag
@@ -355,23 +355,23 @@ FROM (
 		) t
 	) t1;
  </msg>
-<msg timestamp="20211123 12:20:37.655" level="INFO">${output} = [{'Ext_res': 0, 'Fold_res': 0}]</msg>
-<status status="PASS" starttime="20211123 12:20:37.610" endtime="20211123 12:20:37.655"/>
+<msg timestamp="20211123 12:21:12.469" level="INFO">${output} = [{'Ext_res': 0, 'Fold_res': 0}]</msg>
+<status status="PASS" starttime="20211123 12:21:12.417" endtime="20211123 12:21:12.469"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211123 12:20:37.740" level="INFO">[{'Ext_res': 0, 'Fold_res': 0}]</msg>
-<status status="PASS" starttime="20211123 12:20:37.697" endtime="20211123 12:20:37.740"/>
+<msg timestamp="20211123 12:21:12.554" level="INFO">[{'Ext_res': 0, 'Fold_res': 0}]</msg>
+<status status="PASS" starttime="20211123 12:21:12.510" endtime="20211123 12:21:12.554"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output[0]}[Ext_res]</arg>
 <arg>0</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20211123 12:20:37.825" level="INFO">Argument types are:
+<msg timestamp="20211123 12:21:12.634" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20211123 12:20:37.782" endtime="20211123 12:20:37.825"/>
+<status status="PASS" starttime="20211123 12:21:12.593" endtime="20211123 12:21:12.634"/>
 </kw>
 <doc>| Testing if the FileExtension column is well formed.
 |
@@ -380,29 +380,29 @@ FROM (
 | 3. If as a result of the script execution we get 0, then the test is passed</doc>
 <tag>Document</tag>
 <tag>smoke</tag>
-<status status="PASS" starttime="20211123 12:20:37.483" endtime="20211123 12:20:37.867"/>
+<status status="PASS" starttime="20211123 12:21:12.295" endtime="20211123 12:21:12.673"/>
 </test>
 <test id="s1-t7" name="Table Must Exist - UnitMeasure">
 <kw name="Table Must Exist" library="DatabaseLibrary">
 <arg>UnitMeasure</arg>
 <doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
 explicit transaction commit or rollback.</doc>
-<msg timestamp="20211123 12:20:37.995" level="INFO">Executing : Table Must Exist  |  UnitMeasure </msg>
-<msg timestamp="20211123 12:20:37.995" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='UnitMeasure' </msg>
-<status status="PASS" starttime="20211123 12:20:37.952" endtime="20211123 12:20:37.996"/>
+<msg timestamp="20211123 12:21:12.799" level="INFO">Executing : Table Must Exist  |  UnitMeasure </msg>
+<msg timestamp="20211123 12:21:12.799" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='UnitMeasure' </msg>
+<status status="PASS" starttime="20211123 12:21:12.759" endtime="20211123 12:21:12.801"/>
 </kw>
 <doc>Checking for the presence of the UnitMeasure table in the database</doc>
 <tag>smoke</tag>
 <tag>UnitMeasure</tag>
-<status status="PASS" starttime="20211123 12:20:37.910" endtime="20211123 12:20:38.038"/>
+<status status="PASS" starttime="20211123 12:21:12.717" endtime="20211123 12:21:12.841"/>
 </test>
 <test id="s1-t8" name="Verify Query - Check full duplicates in UnitMeasure">
 <kw name="Get File" library="OperatingSystem">
 <var>${sql_query}</var>
 <arg>sql/Production/UnitMeasure/duplicates.sql</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20211123 12:20:38.167" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/duplicates.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/duplicates.sql&lt;/a&gt;'.</msg>
-<msg timestamp="20211123 12:20:38.167" level="INFO">${sql_query} = SELECT count(*) AS count
+<msg timestamp="20211123 12:21:12.961" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/duplicates.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/duplicates.sql&lt;/a&gt;'.</msg>
+<msg timestamp="20211123 12:21:12.962" level="INFO">${sql_query} = SELECT count(*) AS count
 FROM (
 	SELECT UnitMeasureCode
 		,Name
@@ -413,7 +413,7 @@ FROM (
 	HAVING count(*) &gt; 1
 	) t;
 </msg>
-<status status="PASS" starttime="20211123 12:20:38.123" endtime="20211123 12:20:38.167"/>
+<status status="PASS" starttime="20211123 12:21:12.922" endtime="20211123 12:21:12.962"/>
 </kw>
 <kw name="Query" library="DatabaseLibrary">
 <var>${output}</var>
@@ -421,7 +421,7 @@ FROM (
 <doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
 input `sansTran` to True to run command without an explicit transaction commit or rollback.
 Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20211123 12:20:38.251" level="INFO">Executing : Query  |  SELECT count(*) AS count
+<msg timestamp="20211123 12:21:13.042" level="INFO">Executing : Query  |  SELECT count(*) AS count
 FROM (
 	SELECT UnitMeasureCode
 		,Name
@@ -432,23 +432,23 @@ FROM (
 	HAVING count(*) &gt; 1
 	) t;
  </msg>
-<msg timestamp="20211123 12:20:38.252" level="INFO">${output} = [(0,)]</msg>
-<status status="PASS" starttime="20211123 12:20:38.208" endtime="20211123 12:20:38.252"/>
+<msg timestamp="20211123 12:21:13.043" level="INFO">${output} = [(0,)]</msg>
+<status status="PASS" starttime="20211123 12:21:13.002" endtime="20211123 12:21:13.043"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211123 12:20:38.335" level="INFO">[(0,)]</msg>
-<status status="PASS" starttime="20211123 12:20:38.293" endtime="20211123 12:20:38.335"/>
+<msg timestamp="20211123 12:21:13.121" level="INFO">[(0,)]</msg>
+<status status="PASS" starttime="20211123 12:21:13.082" endtime="20211123 12:21:13.121"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output}</arg>
 <arg>[(0,)]</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20211123 12:20:38.420" level="INFO">Argument types are:
+<msg timestamp="20211123 12:21:13.201" level="INFO">Argument types are:
 &lt;class 'list'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20211123 12:20:38.377" endtime="20211123 12:20:38.420"/>
+<status status="PASS" starttime="20211123 12:21:13.160" endtime="20211123 12:21:13.201"/>
 </kw>
 <doc>| Checking the table for duplicates
 |
@@ -457,18 +457,18 @@ FROM (
 | 3. If as a result of the script execution we get 0, then the test is passed</doc>
 <tag>smoke</tag>
 <tag>UnitMeasure</tag>
-<status status="PASS" starttime="20211123 12:20:38.081" endtime="20211123 12:20:38.462"/>
+<status status="PASS" starttime="20211123 12:21:12.881" endtime="20211123 12:21:13.240"/>
 </test>
 <test id="s1-t9" name="Insert NULL Into UnitMeasureCode in UnitMeasure Table">
 <kw name="Get File" library="OperatingSystem">
 <var>${sql_query}</var>
 <arg>sql/Production/UnitMeasure/null_Code.sql</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20211123 12:20:38.590" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Code.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Code.sql&lt;/a&gt;'.</msg>
-<msg timestamp="20211123 12:20:38.591" level="INFO">${sql_query} = INSERT INTO Production.UnitMeasure (UnitMeasureCode)
+<msg timestamp="20211123 12:21:13.366" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Code.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Code.sql&lt;/a&gt;'.</msg>
+<msg timestamp="20211123 12:21:13.366" level="INFO">${sql_query} = INSERT INTO Production.UnitMeasure (UnitMeasureCode)
 VALUES (NULL);
 </msg>
-<status status="PASS" starttime="20211123 12:20:38.547" endtime="20211123 12:20:38.591"/>
+<status status="PASS" starttime="20211123 12:21:13.325" endtime="20211123 12:21:13.366"/>
 </kw>
 <kw name="Run Keyword And Expect Error" library="BuiltIn">
 <var>${err_msg}</var>
@@ -480,26 +480,26 @@ VALUES (NULL);
 <arg>${sql_query}</arg>
 <doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
 True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20211123 12:20:38.719" level="INFO">Executing : Execute SQL String  |  INSERT INTO Production.UnitMeasure (UnitMeasureCode)
+<msg timestamp="20211123 12:21:13.486" level="INFO">Executing : Execute SQL String  |  INSERT INTO Production.UnitMeasure (UnitMeasureCode)
 VALUES (NULL);
  </msg>
-<msg timestamp="20211123 12:20:38.722" level="FAIL">IntegrityError: (515, b"Cannot insert the value NULL into column 'UnitMeasureCode', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
-<status status="FAIL" starttime="20211123 12:20:38.676" endtime="20211123 12:20:38.767"/>
+<msg timestamp="20211123 12:21:13.489" level="FAIL">IntegrityError: (515, b"Cannot insert the value NULL into column 'UnitMeasureCode', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
+<status status="FAIL" starttime="20211123 12:21:13.445" endtime="20211123 12:21:13.531"/>
 </kw>
-<msg timestamp="20211123 12:20:38.811" level="INFO">${err_msg} = IntegrityError: (515, b"Cannot insert the value NULL into column 'UnitMeasureCode', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20...</msg>
-<status status="PASS" starttime="20211123 12:20:38.632" endtime="20211123 12:20:38.811"/>
+<msg timestamp="20211123 12:21:13.571" level="INFO">${err_msg} = IntegrityError: (515, b"Cannot insert the value NULL into column 'UnitMeasureCode', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20...</msg>
+<status status="PASS" starttime="20211123 12:21:13.405" endtime="20211123 12:21:13.571"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${err_msg}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211123 12:20:38.896" level="INFO">IntegrityError: (515, b"Cannot insert the value NULL into column 'UnitMeasureCode', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
-<status status="PASS" starttime="20211123 12:20:38.853" endtime="20211123 12:20:38.896"/>
+<msg timestamp="20211123 12:21:13.652" level="INFO">IntegrityError: (515, b"Cannot insert the value NULL into column 'UnitMeasureCode', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
+<status status="PASS" starttime="20211123 12:21:13.611" endtime="20211123 12:21:13.652"/>
 </kw>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${err_msg}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20211123 12:20:38.980" level="INFO">Length is 283</msg>
-<status status="PASS" starttime="20211123 12:20:38.939" endtime="20211123 12:20:38.981"/>
+<msg timestamp="20211123 12:21:13.732" level="INFO">Length is 283</msg>
+<status status="PASS" starttime="20211123 12:21:13.692" endtime="20211123 12:21:13.732"/>
 </kw>
 <doc>| We are trying to insert a NULL value into the UnitMeasure table into the UnitMeasureCode column
 |
@@ -508,18 +508,18 @@ VALUES (NULL);
 | 3. If the script is executed with an error, then the test passed and we cannot insert NULL</doc>
 <tag>smoke</tag>
 <tag>UnitMeasure</tag>
-<status status="PASS" starttime="20211123 12:20:38.505" endtime="20211123 12:20:39.032"/>
+<status status="PASS" starttime="20211123 12:21:13.284" endtime="20211123 12:21:13.772"/>
 </test>
 <test id="s1-t10" name="Insert NULL Into Name in UnitMeasure Table">
 <kw name="Get File" library="OperatingSystem">
 <var>${sql_query}</var>
 <arg>sql/Production/UnitMeasure/null_Name.sql</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20211123 12:20:39.161" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Name.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Name.sql&lt;/a&gt;'.</msg>
-<msg timestamp="20211123 12:20:39.161" level="INFO">${sql_query} = INSERT INTO Production.UnitMeasure (Name)
+<msg timestamp="20211123 12:21:13.894" level="INFO" html="true">Getting file '&lt;a href="file:///var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Name.sql"&gt;/var/jenkins_home/workspace/db_test/05 - Test Automation for Data Quality Engineers - part 1/sql/Production/UnitMeasure/null_Name.sql&lt;/a&gt;'.</msg>
+<msg timestamp="20211123 12:21:13.894" level="INFO">${sql_query} = INSERT INTO Production.UnitMeasure (Name)
 VALUES (NULL);
 </msg>
-<status status="PASS" starttime="20211123 12:20:39.117" endtime="20211123 12:20:39.161"/>
+<status status="PASS" starttime="20211123 12:21:13.852" endtime="20211123 12:21:13.894"/>
 </kw>
 <kw name="Run Keyword And Expect Error" library="BuiltIn">
 <var>${err_msg}</var>
@@ -531,26 +531,26 @@ VALUES (NULL);
 <arg>${sql_query}</arg>
 <doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
 True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20211123 12:20:39.465" level="INFO">Executing : Execute SQL String  |  INSERT INTO Production.UnitMeasure (Name)
+<msg timestamp="20211123 12:21:14.108" level="INFO">Executing : Execute SQL String  |  INSERT INTO Production.UnitMeasure (Name)
 VALUES (NULL);
  </msg>
-<msg timestamp="20211123 12:20:39.467" level="FAIL">IntegrityError: (515, b"Cannot insert the value NULL into column 'Name', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
-<status status="FAIL" starttime="20211123 12:20:39.247" endtime="20211123 12:20:39.467"/>
+<msg timestamp="20211123 12:21:14.109" level="FAIL">IntegrityError: (515, b"Cannot insert the value NULL into column 'Name', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
+<status status="FAIL" starttime="20211123 12:21:13.975" endtime="20211123 12:21:14.110"/>
 </kw>
-<msg timestamp="20211123 12:20:39.508" level="INFO">${err_msg} = IntegrityError: (515, b"Cannot insert the value NULL into column 'Name', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severi...</msg>
-<status status="PASS" starttime="20211123 12:20:39.204" endtime="20211123 12:20:39.508"/>
+<msg timestamp="20211123 12:21:14.154" level="INFO">${err_msg} = IntegrityError: (515, b"Cannot insert the value NULL into column 'Name', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severi...</msg>
+<status status="PASS" starttime="20211123 12:21:13.934" endtime="20211123 12:21:14.154"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${err_msg}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211123 12:20:39.586" level="INFO">IntegrityError: (515, b"Cannot insert the value NULL into column 'Name', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
-<status status="PASS" starttime="20211123 12:20:39.547" endtime="20211123 12:20:39.586"/>
+<msg timestamp="20211123 12:21:14.241" level="INFO">IntegrityError: (515, b"Cannot insert the value NULL into column 'Name', table 'AdventureWorks2019.Production.UnitMeasure'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")</msg>
+<status status="PASS" starttime="20211123 12:21:14.196" endtime="20211123 12:21:14.241"/>
 </kw>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${err_msg}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20211123 12:20:39.665" level="INFO">Length is 272</msg>
-<status status="PASS" starttime="20211123 12:20:39.626" endtime="20211123 12:20:39.665"/>
+<msg timestamp="20211123 12:21:14.329" level="INFO">Length is 272</msg>
+<status status="PASS" starttime="20211123 12:21:14.285" endtime="20211123 12:21:14.329"/>
 </kw>
 <doc>| We are trying to insert a NULL value into the UnitMeasure table into the Name column
 |
@@ -559,15 +559,15 @@ VALUES (NULL);
 | 3. If the script is executed with an error, then the test passed and we cannot insert NULL</doc>
 <tag>smoke</tag>
 <tag>UnitMeasure</tag>
-<status status="PASS" starttime="20211123 12:20:39.076" endtime="20211123 12:20:39.704"/>
+<status status="PASS" starttime="20211123 12:21:13.812" endtime="20211123 12:21:14.372"/>
 </test>
 <kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
 <doc>Disconnects from the database.</doc>
-<msg timestamp="20211123 12:20:39.783" level="INFO">Executing : Disconnect From Database</msg>
-<status status="PASS" starttime="20211123 12:20:39.745" endtime="20211123 12:20:39.784"/>
+<msg timestamp="20211123 12:21:14.464" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20211123 12:21:14.417" endtime="20211123 12:21:14.464"/>
 </kw>
 <doc>Robot resources and variables for all tests</doc>
-<status status="PASS" starttime="20211123 12:20:34.543" endtime="20211123 12:20:39.823"/>
+<status status="PASS" starttime="20211123 12:21:09.557" endtime="20211123 12:21:14.507"/>
 </suite>
 <statistics>
 <total>
