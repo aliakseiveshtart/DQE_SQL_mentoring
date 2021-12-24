@@ -1,0 +1,13 @@
+For automatic start, cron is used, which runs the script MyTests.ipynb in jupyter notebook.
+
+Cron is a built-in Linux service for running scripts on a schedule.
+
+Sample file and cron setup:
+
+Edit the cron file with the command:
+crontab -e
+
+add the following lines to it:
+*/5 * * * * /usr/local/bin/jupyter nbconvert --execute --to html ~/MyTests.ipynb
+
+Now the required script will run every 5 minutes.
